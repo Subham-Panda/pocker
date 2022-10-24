@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
     // it returns -1 if the process has no child process
     // ECHILD is the error macro defined for no child process. It corresponds to errno 10
     // this infinite while loop runs until all child processes are exited
+    // errno is the macro defined in errno.h header. It is the macro for the function _error() which returns an error code in integer format in case a syscall fails
     while(wait(NULL)!=-1 || errno!=ECHILD);
 
     cout<<"\n\n\nThis output is from the PARENT PROCESS running the function called using exec syscall"<<endl;
