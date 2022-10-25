@@ -3,3 +3,4 @@ execDemo
 printPID
 forkDemo
 myAssertTemplate
+utsNamespace
